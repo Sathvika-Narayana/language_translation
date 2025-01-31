@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translation System</h1>
+        <form id="translation-form">
+            <textarea id="text-input" placeholder="Enter text to translate..."></textarea>
+            <input type="text" id="src-lang" placeholder="Source language code (e.g., 'en')">
+            <input type="text" id="tgt-lang" placeholder="Target language code (e.g., 'fr')">
+            <button type="button" onclick="translateText()">Translate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
